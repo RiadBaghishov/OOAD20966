@@ -1,4 +1,4 @@
-# Random Number Generator and Statistics
+# Random Number Generator and Descriptive Statistics
 
 ## Author
 Riad Baghishov
@@ -6,36 +6,63 @@ Riad Baghishov
 ## Course
 Object Oriented Analysis and Design
 
-## Description
-This Java program generates random double values in the range [0, 1)
-using three different built-in Java random number generators:
+## Assignment Description
+This assignment requires the implementation of a Java program that generates
+random double values in the range **[0, 1)** using different built-in Java random
+number generators and analyzes the generated data using descriptive statistics.
 
-- java.util.Random
-- Math.random()
-- java.util.concurrent.ThreadLocalRandom
+The goal is to observe how statistical measures change as the sample size
+increases and compare different random number generation approaches provided by
+the Java standard library.
 
-For different sample sizes, the program calculates descriptive statistics
-including:
+---
+
+## Random Number Generators Used
+The program uses the following Java random number generators:
+
+- `java.util.Random`
+- `Math.random()`
+- `java.util.concurrent.ThreadLocalRandom`
+
+---
+
+## Statistical Measures Calculated
+For each generated dataset, the program calculates:
+
 - Number of elements (n)
 - Mean
 - Sample standard deviation
-- Minimum
-- Maximum
+- Minimum value
+- Maximum value
 
-The results are displayed in a tabular format in the console.
+As the sample size increases:
+- Minimum approaches 0
+- Maximum approaches 1
+- Mean approaches 0.5
+- Sample standard deviation approaches approximately 0.29
 
-## Program Structure
-The program consists of a single Java class named `Generator` with the
-following methods:
+Small deviations are expected for smaller sample sizes.
 
-- `populate(int n, int randNumGen)`
-- `statistics(ArrayList<Double> randomValues)`
-- `display(ArrayList<Double> results, boolean headerOn)`
-- `execute()`
+---
 
-The `main` method only creates an instance of the `Generator` class
-and calls the `execute()` method, as required.
+## Program Requirements Satisfied
+- Single Java class named `Generator`
+- Generates random values in `[0, 1)`
+- Uses multiple random number generators
+- Computes descriptive statistics
+- Displays results in tabular format
+- Produces **nine total results**
+- Minimal `main` method
+- Beginner-friendly Java implementation
+- Clear comments explaining object-oriented concepts
 
-## How to Run
-1. Compile the program:
+---
 
+## Object-Oriented Concepts Demonstrated
+The source code explicitly highlights the following concepts using comments:
+
+- Class definition
+- Method definition
+- Class attributes
+- Object instantiation
+- Accessibility (`public`)
